@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div class="grid-container">
+    <md-button-toggle-group vertical #group="mdButtonToggleGroup">
+        <md-button-toggle routerLink="/" value="files" mdTooltip="File Browser" mdTooltipPosition="after" checked="true">
+            <md-icon class="push-top push-bottom">folder_open</md-icon>
+        </md-button-toggle>
+        <md-button-toggle routerLink="/compare" value="data" mdTooltip="Data Sources" mdTooltipPosition="after">
+            <md-icon class="push-top push-bottom">storage</md-icon>
+        </md-button-toggle>
+        <md-button-toggle value="right" mdTooltip="Filters" mdTooltipPosition="after">
+            <md-icon class="push-top push-bottom">filter_tilt_shift</md-icon>
+        </md-button-toggle>
+        <md-button-toggle value="justify" mdTooltip="Cloud Connections" mdTooltipPosition="after">
+            <md-icon class="push-top push-bottom">filter_drama</md-icon>
+        </md-button-toggle>
+        <div flex></div>
+    </md-button-toggle-group>
+    <div class="grid-main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

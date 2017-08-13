@@ -6,22 +6,25 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { appRoutes, appRoutingProviders } from './app.routes';
 
-import { MdButtonModule, MdIconModule, MdButtonToggleModule, MdMenuModule, MdSidenavModule } from '@angular/material';
+import { MdButtonModule, MdInputModule, MdIconModule, MdButtonToggleModule, MdMenuModule, MdSidenavModule } from '@angular/material';
 import { CovalentHttpModule } from '@covalent/http';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentCodeEditorModule } from '@covalent/code-editor';
 import { CovalentFileSelectModule } from '../platform/file-select';
+import { ListCompareComponent } from './components/list-compare/list-compare.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ListCompareComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     BrowserModule,
     MdButtonModule,
     MdIconModule,
+    MdInputModule,
     MdButtonToggleModule,
     MdMenuModule,
     MdSidenavModule,
